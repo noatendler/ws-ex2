@@ -11,7 +11,7 @@ var showBestApp = angular.module('showBestApp',['ngRoute'])
     })
 
 showBestApp.controller('bestCtrl',['$scope','$http', '$location',function($scope,$http, $location) {
-     $http.get("http://localhost:3000/getbest/"+$location.search().year).success(function(data){
+     $http.get("https://ws-noa-ex2.herokuapp.com/getbest/"+$location.search().year).success(function(data){
         $scope.bestStud = data; 
         console.log(data);
     });
