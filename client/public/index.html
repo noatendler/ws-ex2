@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="showApp">
+ <head>
+ <title>students</title>
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+ <body ng-controller="studentCtrl">
+ <h1 class="text-center">all data from mongo</h1>
+      <div ng-repeat = "all in allstudents">
+          <p class="text-center">id: {{all.idStudent}}</p>
+          <p class="text-center">name: {{all.name}}</p>
+          <p class="text-center">grade: {{all.grade}}</p>
+          <p class="text-center">course: {{all.course}}</p>
+          <p class="text-center">year: {{all.year}}</p>
+          <p class="text-center"> -----------------</p>
+    </div>
+    <button class="btn btn-info" id="button1" onclick="window.location.href='getStudentById.html?id=1'">student by id</button>
+    <button class="btn btn-info" id="button2" onclick="window.location.href='getBestByyear.html?year=2015'">best student by year</button>
+ </tbody>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/allstudents.js"></script>
+ </body>
+ </html>
+

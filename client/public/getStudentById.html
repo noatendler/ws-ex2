@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="showidApp">
+ <head>
+   <title>students</title>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+ <body ng-controller="studentidCtrl">
+ <h1 class="text-center">student by id</h1>
+      <div ng-repeat = "stud in studbyid">
+          <p class="text-center">id: {{stud.idStudent}}</p>
+          <p class="text-center">name: {{stud.name}}</p>
+          <p class="text-center">grade: {{stud.grade}}</p>
+          <p class="text-center">course: {{stud.course}}</p>
+          <p class="text-center">year: {{stud.year}}</p>
+          <p class="text-center"> -----------------</p>
+    </div>
+  <button class="btn btn-info" id="button" onclick="window.location.href='index.html'">back</button>
+ </tbody>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/studbyid.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+ </body>
+ </html>
