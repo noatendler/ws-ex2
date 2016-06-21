@@ -12,7 +12,7 @@ var showidApp = angular.module('showidApp',['ngRoute'])
 
 showidApp.controller('studentidCtrl',['$scope','$http', '$location',function($scope,$http, $location) {
     console.log($location.search().id);
-     $http.get("http://localhost:3000/getbyid/"+$location.search().id).success(function(data){
+     $http.get("https://ws-noa-ex2.herokuapp.com/getbyid/"+$location.search().id).success(function(data){
         $scope.studbyid = data; 
         console.log(data);
     });
